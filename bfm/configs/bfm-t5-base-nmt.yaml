@@ -1,7 +1,7 @@
 training_data_paths:
-- ./data/NMT/NMT_dl/nmt_dl/train/
+  - ./data/NMT/NMT_dl/nmt_dl/train/
 validation_data_paths:
-- ./data/NMT/NMT_dl/nmt_dl/val/
+  - ./data/NMT/NMT_dl/nmt_dl/val/
 dataset: "nmt"
 project_dir: "./bfm/"
 experiment_name: "test_experiment_v0"

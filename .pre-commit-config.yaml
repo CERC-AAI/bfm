@@ -8,7 +8,7 @@ ci:
   autoupdate_branch: "master"
   autoupdate_commit_msg: "[pre-commit.ci] pre-commit autoupdate"
   autoupdate_schedule: quarterly
-  skip: [ ]
+  skip: []
   submodules: false
 
 repos:
@@ -29,22 +29,20 @@ repos:
       - id: check-case-conflict
       - id: forbid-new-submodules
       - id: pretty-format-json
-        args: [ "--autofix", "--no-sort-keys", "--indent=4" ]
+        args: ["--autofix", "--no-sort-keys", "--indent=4"]
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
     rev: v0.4.8
     hooks:
       - id: ruff
-        args: [ "--ignore=E402,E501,F401", "--fix" ] #, --exit-non-zero-on-fix, ]
+        args: ["--ignore=E402,E501,F401", "--fix"] #, --exit-non-zero-on-fix, ]
       - id: ruff
         name: ruff lint data notebooks
-        args: [ "--fix", "--preview", "--select=NPY201" ]
+        args: ["--fix", "--preview", "--select=NPY201"]
       - id: ruff
-        args: [ "check", "--select", "I", "--fix"]
+        args: ["check", "--select", "I", "--fix"]
       - id: ruff-format
-        types_or: [ python, pyi, jupyter ]
-
-
+        types_or: [python, pyi, jupyter]
 
   - repo: https://github.com/codespell-project/codespell
     rev: v2.3.0
@@ -54,7 +52,7 @@ repos:
           - --ignore-words-list=metadat,splitted,meaned,wil,whats,additionals,alle,alot,bund,currenty,datas,farenheit,falsy,fo,haa,hass,iif,incomfort,ines,ist,nam,nd,pres,pullrequests,resset,rime,ser,serie,te,technik,ue,unsecure,withing,zar,MAPE,mape
           - --skip="./.*,*.csv,*.json,*.ambr"
           - --quiet-level=2
-        exclude_types: [ csv, json ]
+        exclude_types: [csv, json]
         exclude: ^tests/|generated/^.github
 
   - repo: https://github.com/asottile/blacken-docs
