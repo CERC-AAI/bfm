@@ -1,0 +1,18 @@
+gluonts[torch]
+numpy==1.23.5
+torch>=2.0.0
+wandb
+scipy
+pandas==2.1.4
+huggingface_hub[cli]
+matplotlib
+pathlib
+autogluon
+typer
+typer_config
+transformers[deepspeed]
+braindecode
+git+https://github.com/NeuroTechX/moabb#egg=moabb
+"chronos[training] @ git+https://github.com/amazon-science/chronos-forecasting.git"
+pyarrow==16.1.0
+accelerate==0.27.2
