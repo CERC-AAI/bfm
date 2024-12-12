@@ -4,8 +4,15 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.number }}-${{ github.event.ref }}
   cancel-in-progress: true
 
-on: [pull_request]
-
+on:
+  pull_request:
+    branches:
+      - master
+      - main
+  push:
+    branches:
+      - master
+      - main
 jobs:
   pre-commit:
     runs-on: ubuntu-latest
