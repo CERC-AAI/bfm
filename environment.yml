@@ -1,0 +1,24 @@
+name: bfm
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy=1.25.2
+  - scipy
+  - pandas=2.1.4
+  - matplotlib
+  - pyarrow=16.1.0
+  - pip:
+    - gluonts[torch]
+    - torch>=2.0.0
+    - wandb
+    - huggingface_hub[cli]
+    - pathlib
+    - typer
+    - typer_config
+    - transformers==4.44.2
+    - git+https://github.com/bruAristimunha/braindecode#egg=braindecode
+    - git+https://github.com/NeuroTechX/moabb#egg=moabb
+    - accelerate==0.34.0

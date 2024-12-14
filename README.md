@@ -11,7 +11,12 @@ To install the requirements, run the following command:
 ```bash
 pip install -r requirements.txt
 ```
-
+or create conda environment with `conda env create -f environment.yml`
+and install chronos dependency:
+```
+conda activate bfm
+pip install "chronos-forecasting[training] @ git+https://github.com/amazon-science/chronos-forecasting.git"
+```
 ## 1. Download and preprocess the data
 
 Download the NMT data from [here](https://ilabel.ai/datasets/Nust-Millitary-Hospital-TUKl-NMT-EEG-Dataset/NMT-Scalp-EEG.zip) and extract it to the `data` folder. or you can use the following command:

@@ -13,6 +13,6 @@ typer_config
 transformers[deepspeed]
 braindecode
 git+https://github.com/NeuroTechX/moabb#egg=moabb
-"chronos[training] @ git+https://github.com/amazon-science/chronos-forecasting.git"
+"chronos-forecasting[training] @ git+https://github.com/amazon-science/chronos-forecasting.git"
 pyarrow==16.1.0
 accelerate==0.27.2
